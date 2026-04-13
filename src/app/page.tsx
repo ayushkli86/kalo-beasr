@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+
 import { Leaf, Phone, Heart, Activity, Brain, Wind, Utensils, Droplet, Bone, Baby, MessageCircle, CheckCircle, Sprout, Tractor, Camera, ShoppingCart, X } from 'lucide-react'
 
 // Pre-defined floating leaves data to avoid hydration mismatch
@@ -23,7 +23,6 @@ export default function Home() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    product: '',
     address: ''
   })
   const [showToast, setShowToast] = useState(false)
@@ -64,14 +63,13 @@ export default function Home() {
 
 नाम: ${formData.name}
 फोन: ${formData.phone}
-उत्पादन: ${formData.product}
 ठेगाना: ${formData.address || 'दिइएको छैन'}
 
 कृपया मलाई जानकारी दिनुहोला।`
         
         const whatsappUrl = `https://wa.me/9779842381553?text=${encodeURIComponent(message)}`
         window.open(whatsappUrl, '_blank')
-        setFormData({ name: '', phone: '', product: '', address: '' })
+        setFormData({ name: '', phone: '', address: '' })
       }, 3000)
     }
   }
@@ -415,24 +413,6 @@ export default function Home() {
                       required
                       className="border-[#b87c4f]/30 focus:border-[#b87c4f]"
                     />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-semibold text-[#2c221b] mb-2">उत्पादन छान्नुहोस् *</label>
-                    <Select
-                      value={formData.product}
-                      onValueChange={(value) => setFormData({ ...formData, product: value })}
-                      required
-                    >
-                      <SelectTrigger className="border-[#b87c4f]/30 focus:border-[#b87c4f]">
-                        <SelectValue placeholder="उत्पादन छान्नुहोस्" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="fresh-1kg">ताजा कालो बेसार (१ केजी)</SelectItem>
-                        <SelectItem value="powder-500g">पाउडर (५०० ग्राम)</SelectItem>
-                        <SelectItem value="mixed">मह मिश्रित</SelectItem>
-                      </SelectContent>
-                    </Select>
                   </div>
 
                   <div>
