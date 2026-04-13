@@ -69,7 +69,7 @@ export default function Home() {
 
 कृपया मलाई जानकारी दिनुहोला।`
         
-        const whatsappUrl = `https://wa.me/9779812345678?text=${encodeURIComponent(message)}`
+        const whatsappUrl = `https://wa.me/9779842381553?text=${encodeURIComponent(message)}`
         window.open(whatsappUrl, '_blank')
         setFormData({ name: '', phone: '', product: '', address: '' })
       }, 3000)
@@ -84,7 +84,7 @@ export default function Home() {
   }
 
   const openWhatsApp = (message: string) => {
-    const whatsappUrl = `https://wa.me/9779812345678?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/9779842381553?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
 
@@ -366,7 +366,7 @@ export default function Home() {
                       <span className="font-semibold text-[#2c221b]">सम्पर्क व्यक्ति:</span>
                     </div>
                     <p className="text-lg font-bold text-[#b87c4f] mb-4">Namuna Krishi Farm (किसान समूह)</p>
-                    <p className="text-xl font-bold text-[#2c221b] mb-2">+977 9812345678</p>
+                    <p className="text-xl font-bold text-[#2c221b] mb-2">+977 9842381553</p>
                     <div className="flex flex-col gap-2 mt-4 text-sm text-[#5a4a3a]">
                       <p className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-[#25D366]" />
@@ -409,7 +409,7 @@ export default function Home() {
                     <label className="block text-sm font-semibold text-[#2c221b] mb-2">WhatsApp नम्बर *</label>
                     <Input
                       type="tel"
-                      placeholder="9812345678"
+                      placeholder="9842381553"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
@@ -478,7 +478,7 @@ export default function Home() {
                 <p className="text-[#5a4a3a] mb-4">सम्पर्क व्यक्ति</p>
 
                 <div className="bg-white/60 rounded-2xl p-6 mb-6">
-                  <p className="text-2xl font-bold text-[#2c221b] mb-2">+977 9812345678</p>
+                  <p className="text-2xl font-bold text-[#2c221b] mb-2">+977 9842381553</p>
                   <p className="text-sm text-[#5a4a3a]">समय: 09:00 - 20:00 (NPT)</p>
                 </div>
 
@@ -503,7 +503,7 @@ export default function Home() {
             <span className="text-2xl font-bold">कालो बेसार</span>
           </div>
           <p className="text-lg mb-2">Namuna Krishi Farm प्रस्तुत</p>
-          <p className="text-[#ecd9c0]/80 mb-4">सम्पर्क: WhatsApp +977 9812345678</p>
+          <p className="text-[#ecd9c0]/80 mb-4">सम्पर्क: WhatsApp +977 9842381553</p>
           <p className="text-[#ecd9c0]/60 mb-6">कालो बेसारको प्राकृतिक चिकित्सा</p>
           <div className="border-t border-[#ecd9c0]/20 pt-6">
             <p className="text-sm text-[#ecd9c0]/60">
