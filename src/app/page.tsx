@@ -7,6 +7,18 @@ import { Input } from '@/components/ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Leaf, Phone, Heart, Activity, Brain, Wind, Utensils, Droplet, Bone, Baby, MessageCircle, CheckCircle, Sprout, Tractor, Camera, ShoppingCart, X } from 'lucide-react'
 
+// Pre-defined floating leaves data to avoid hydration mismatch
+const floatingLeaves = [
+  { left: '5%', top: '10%', size: 'w-8 h-8', delay: '0s' },
+  { left: '15%', top: '70%', size: 'w-6 h-6', delay: '0.5s' },
+  { left: '25%', top: '30%', size: 'w-10 h-10', delay: '1s' },
+  { left: '45%', top: '50%', size: 'w-7 h-7', delay: '1.5s' },
+  { left: '65%', top: '20%', size: 'w-9 h-9', delay: '2s' },
+  { left: '75%', top: '80%', size: 'w-6 h-6', delay: '2.5s' },
+  { left: '85%', top: '40%', size: 'w-8 h-8', delay: '3s' },
+  { left: '95%', top: '60%', size: 'w-7 h-7', delay: '3.5s' }
+]
+
 export default function Home() {
   const [formData, setFormData] = useState({
     name: '',
@@ -166,17 +178,15 @@ export default function Home() {
         <section className="relative overflow-hidden py-12 md:py-20 px-4">
           {/* Floating Leaves Background */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {[...Array(8)].map((_, i) => (
+            {floatingLeaves.map((leaf, i) => (
               <Leaf
                 key={i}
-                className="absolute text-[#b87c4f]/10"
+                className={`absolute text-[#b87c4f]/10 ${leaf.size}`}
                 style={{
-                  width: `${Math.random() * 40 + 20}px`,
-                  height: `${Math.random() * 40 + 20}px`,
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animation: `float ${3 + Math.random() * 2}s ease-in-out infinite`,
-                  animationDelay: `${Math.random() * 2}s`
+                  left: leaf.left,
+                  top: leaf.top,
+                  animation: `float 3s ease-in-out infinite`,
+                  animationDelay: leaf.delay
                 }}
               />
             ))}
@@ -194,11 +204,11 @@ export default function Home() {
             {/* Main Title */}
             <div className="text-center mb-10 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
               <h1 className="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-[#b87c4f] via-[#2c221b] to-[#e6a157] bg-clip-text text-transparent leading-tight">
-                कालो बेसार यात्रा
+                कालो बेसार
               </h1>
               <p className="text-xl md:text-2xl text-[#5a4a3a] italic font-medium flex items-center justify-center gap-2">
                 <Sprout className="w-6 h-6 text-[#e6a157]" />
-                Kalo Besar Journey - Traditional Healing & Agricultural Wellness
+                Kalo Besar - Traditional Healing & Agricultural Wellness
               </p>
             </div>
 
@@ -490,14 +500,14 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Sprout className="w-8 h-8 text-[#e6a157]" />
-            <span className="text-2xl font-bold">कालो बेसार यात्रा</span>
+            <span className="text-2xl font-bold">कालो बेसार</span>
           </div>
           <p className="text-lg mb-2">Namuna Krishi Farm प्रस्तुत</p>
           <p className="text-[#ecd9c0]/80 mb-4">सम्पर्क: WhatsApp +977 9812345678</p>
           <p className="text-[#ecd9c0]/60 mb-6">कालो बेसारको प्राकृतिक चिकित्सा</p>
           <div className="border-t border-[#ecd9c0]/20 pt-6">
             <p className="text-sm text-[#ecd9c0]/60">
-              © 2025 Kalo Besar Journey | प्रामाणिक कृषि उत्पादन
+              © 2025 Kalo Besar | प्रामाणिक कृषि उत्पादन
             </p>
           </div>
         </div>
