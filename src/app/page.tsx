@@ -137,10 +137,10 @@ export default function Home() {
   ]
 
   const galleryImages = [
+    { src: '/images/one1.png', caption: 'कालो बेसारको प्राकृतिक स्वरूप' },
+    { src: '/images/besar1.jpeg', caption: 'उत्तम गुणस्तरको कालो बेसार' },
     { src: '/images/gallery-fresh-harvest.png', caption: 'ताजा कालो बेसारको फसल' },
-    { src: '/images/gallery-powder.png', caption: 'कालो बेसार पाउडर' },
-    { src: '/images/gallery-farming.png', caption: 'कालो बेसार खेती' },
-    { src: '/images/gallery-medicinal.png', caption: 'औषधिको रूपमा प्रयोग' }
+    { src: '/images/gallery-powder.png', caption: 'कालो बेसार पाउडर' }
   ]
 
   return (
@@ -214,7 +214,7 @@ export default function Home() {
             <div className="mb-10 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
               <Card className="overflow-hidden border-0 shadow-2xl">
                 <img
-                  src="/images/hero-kalo-besar.png"
+                  src="/images/hero.png"
                   alt="Kalo Besar - Black Turmeric"
                   className="w-full h-[400px] md:h-[450px] object-cover"
                 />
