@@ -19,6 +19,8 @@ const floatingLeaves = [
   { left: '95%', top: '60%', size: 'w-7 h-7', delay: '3.5s' }
 ]
 
+const cacheBuster = Date.now()
+
 export default function Home() {
   const [formData, setFormData] = useState({
     name: '',
@@ -137,8 +139,8 @@ export default function Home() {
   ]
 
   const galleryImages = [
-    { src: '/images/one1.png?v=4', caption: 'कालो बेसारको प्राकृतिक स्वरूप' },
-    { src: '/images/besar1.jpeg?v=4', caption: 'उत्तम गुणस्तरको कालो बेसार' },
+    { src: `/images/one1.png?t=${cacheBuster}`, caption: 'कालो बेसारको प्राकृतिक स्वरूप' },
+    { src: `/images/besar1.jpeg?t=${cacheBuster}`, caption: 'उत्तम गुणस्तरको कालो बेसार' },
     { src: '/images/gallery-fresh-harvest.png', caption: 'ताजा कालो बेसारको फसल' },
     { src: '/images/gallery-powder.png', caption: 'कालो बेसार पाउडर' }
   ]
@@ -214,7 +216,7 @@ export default function Home() {
             <div className="mb-10 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
               <Card className="overflow-hidden border-0 shadow-2xl">
                 <img
-                  src="/images/hero.png?v=4"
+                  src={`/images/hero.png?t=${cacheBuster}`}
                   alt="Kalo Besar - Black Turmeric"
                   className="w-full h-[400px] md:h-[450px] object-cover"
                 />
