@@ -216,7 +216,7 @@ export default function Home() {
             <div className="mb-10 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
               <Card className="overflow-hidden border-0 shadow-2xl">
                 <img
-                  src={`/images/hero.png?t=${cacheBuster}`}
+                  src={`/images/hero-new.png?t=${cacheBuster}`}
                   alt="Kalo Besar - Black Turmeric"
                   className="w-full h-[400px] md:h-[450px] object-cover"
                 />
