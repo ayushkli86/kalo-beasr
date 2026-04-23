@@ -141,7 +141,7 @@ export default function Home() {
   const galleryImages = [
     { src: `/images/one1.png?t=${cacheBuster}`, caption: 'कालो बेसारको प्राकृतिक स्वरूप' },
     { src: `/images/besar1.jpeg?t=${cacheBuster}`, caption: 'उत्तम गुणस्तरको कालो बेसार' },
-    { src: '/images/gallery-fresh-harvest.png', caption: 'ताजा कालो बेसारको फसल' },
+    { src: `/images/one2.png?t=${cacheBuster}`, caption: 'ताजा कालो बेसारको फसल' },
     { src: '/images/gallery-powder.png', caption: 'कालो बेसार पाउडर' }
   ]
 
