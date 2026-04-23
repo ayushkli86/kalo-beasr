@@ -19,7 +19,7 @@ const floatingLeaves = [
   { left: '95%', top: '60%', size: 'w-7 h-7', delay: '3.5s' }
 ]
 
-const cacheBuster = Date.now()
+const cacheBuster = "2025-04-23"
 
 export default function Home() {
   const [formData, setFormData] = useState({
